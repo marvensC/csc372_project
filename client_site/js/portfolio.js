@@ -9,7 +9,7 @@ const portfolioMedia = [
   { type: 'video', youtubeId: '1RTsUeKM9W8' },
   { type: 'video', youtubeId: 'Il1ULMYA5_A'},
   { type: 'video', youtubeId: '15V4eRL-ZHg'},
-  { type: 'image', src: 'images/portfolio/467265DE-F487-4BE4-900C-B21FF4222D21.jpg'},
+  { type: 'image', src: 'images/portfolio/img3.jpg'},
   { type: 'video', youtubeId: 'OK3B7ytA0Jk'},
   { type: 'video', youtubeId: 'GgS2OyXi56E'},
   { type: 'video', youtubeId: 'gL0jaoi-M3w'},
@@ -17,12 +17,16 @@ const portfolioMedia = [
   { type: 'video', youtubeId: 'FIb6duFXL4U'},
 ];
 
-//pasue out of view
-const portfolio = document.querySelector('.portfolio');
 
-portfolioMedia.forEach(media => {
+
+function createPortfolio(container, mediaArray) {
+mediaArray.forEach(media => {
   const div = document.createElement('div');
-  div.className = 'portfolio-items';
+  if (container.classList.contains('preview-portfolio')) {
+      div.className = 'preview-portfolio-items';
+    } else if (container.classList.contains('full-portfolio')) {
+      div.className = 'portfolio-items';
+  }
   
   if (media.type === 'video') {
     const iframe = document.createElement('iframe');
@@ -39,5 +43,16 @@ portfolioMedia.forEach(media => {
     div.appendChild(img);
   }
   
-  portfolio.appendChild(div);
+  container.appendChild(div);
 });
+}
+
+const previewPortfolio = document.querySelector('.preview-portfolio');
+if (previewPortfolio) {
+  createPortfolio(previewPortfolio, portfolioMedia);
+}
+
+const fullPortfolio = document.querySelector('.full-portfolio');
+if (fullPortfolio) {
+  createPortfolio(fullPortfolio, portfolioMedia);
+}
