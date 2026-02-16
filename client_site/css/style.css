@@ -7,7 +7,7 @@ css file for the home page
 */
 
 body {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
 }
@@ -15,13 +15,14 @@ body {
 
 
 h1 {
-  color: black;
+  color: orange;
   text-align: center;
   font-size:50px;
 }
 
 h2 {
   text-align: center;
+  color: orange;
 }
 
 #logo {
@@ -29,7 +30,7 @@ h2 {
 }
 
 .header {
-  background-color: lightblue;
+  background-color: black;
   padding: auto;
   display: flex;
   margin: 10px; 
@@ -40,14 +41,14 @@ h2 {
 }
 
 .content {
-  background-color: rgb(233, 239, 238);
+  background-color: black;
   padding: auto;
   margin: 10px;
   
 }
 
 .content p {
-  color: #000000;
+  color: white;
   text-align: center;
   padding:10px;
   max-width: 400px;
@@ -60,18 +61,19 @@ h2 {
   gap:20px;
   float: left;
   margin-right: 20px;
+  
 }
 
 .nav a {
   text-decoration: none;
-  color: black;
+  color: white;
   transition: all 0.2s ease;
   padding: 10px 15px;
 }
 
 .nav a.active {
-  background-color: #ffffff;
-  color: #0b74de;
+  background-color: orange;
+  color: #1a1a1a;
   
 }
 
@@ -85,7 +87,7 @@ h2 {
 }
 
 .nav a:hover {
-  background-color: white;
+  background-color: orange;
   color:red;
   transform: translateY(-1px);
   
@@ -94,7 +96,7 @@ h2 {
 #contact-link {
   transition: all 0.2s ease;
   text-decoration: none;
-  color: #000000;
+  color:white;
 }
 
 #contact-link:hover {
@@ -105,18 +107,19 @@ h2 {
   
 }
 
-.portfolio {
+.preview-portfolio {
   display: flex;
   gap: 15px;
   overflow-x: auto;
   scroll-behavior: smooth;
   padding: 10px 0;
+  
 }
 
 
 
-.portfolio-items {
-  width: 350px;
+.preview-portfolio-items {
+  width: 200px;
   aspect-ratio: 9 / 16; 
   background: black;
   flex-shrink: 0; 
@@ -125,8 +128,8 @@ h2 {
   position: relative;
 }
 
-.portfolio-items iframe,
-.portfolio-items img {
+.preview-portfolio-items iframe,
+.preview-portfolio-items img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -134,23 +137,56 @@ h2 {
   pointer-events: none;
 }
 
-
-
-
-
-#portfolio-frame {
+#preview-portfolio-frame {
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
-  background-color: #e9efee;
+  background-color: #0b0b0b;
   border-radius: 12px;
   overflow: hidden; 
 }
 
+.full-portfolio {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding: 10px 0;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+
+.full-portfolio .portfolio-items {
+  max-width: 200px;
+  aspect-ratio: 9 / 16; 
+  background: black;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.full-portfolio .portfolio-items iframe,
+.full-portfolio .portfolio-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+#full-portfolio-frame {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #0b0b0b;
+  border-radius: 12px;
+}
+
+
 
 .footer {
-  background-color: aquamarine;
-  color: rgb(0, 0, 0);
+  background-color: black;
+  color: white;
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -170,6 +206,7 @@ h2 {
 }
 
 
+
 .socials-links {
   display: flex;
   flex-direction: column;
@@ -181,6 +218,8 @@ h2 {
 .socials-icons {
   display: flex;
   font-size: 24px;
+  gap:18px;
+  flex-direction: row;
 }
 
 .socials-icons a {
@@ -235,4 +274,169 @@ h2 {
     margin-top: 20px
     
   }
+
+  .calendly-inline-widget {
+    height: 900px;
+    padding: 10px;
+  }
+}
+
+/* Modal styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content {
+  background-color: rgb(2, 2, 2);
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  color:white;
+}
+
+
+.close-review,
+.close-contact {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+
+.close-review:hover,
+.close-review:focus,
+.close-contact:hover,
+.close-contact:focus {
+  color: #000;
+}
+
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.modal-content label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+.modal-content input,
+.modal-content textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+
+
+/* Calendly Styling */
+.calendly-inline-widget {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  padding: 20px;
+}
+
+/*services */
+#gallery {
+  gap: 10px;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.gallery-frame {
+   max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+}
+
+#gallery img {
+  
+  width:100%; 
+  height:200px; 
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+
+#gallery img:hover {
+  transform: scale(1.02);
+}
+
+.service-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.service-btn {  
+  padding: 15px 30px;
+  border: 2px solid #444;
+  border-radius: 8px;
+  background-color: #0b0b0b;
+  color: white;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.service-btn:hover {
+  border-color: orange;
+  background-color: #1a1a1a;
+}
+
+.service-btn.active {
+  background-color: orange;
+  color: black;
+  border-color: orange;
+  font-weight: bold;
 }
