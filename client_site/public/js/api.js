@@ -1,3 +1,8 @@
+//Marvens Sainterlien
+//2/15/2026
+//unsplash API page
+
+
 const apiKey="U1-Z5-MN0b5aGajVKnoQqjNIYBKK8orQFSlkhsyo3lo"
 
 let gallery;

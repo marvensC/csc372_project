@@ -1,3 +1,7 @@
+//Marvens Sainterlien
+//2/15/2026
+//contact popup
+
 // Create contact modal
 function createContactModal() {
   const modalHTML = `
