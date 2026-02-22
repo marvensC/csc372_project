@@ -1,6 +1,6 @@
 //array of media
 const portfolioMedia = [
-  { type: 'image', src: 'images/portfolio/IMG_0022.jpeg' },
+  { type: 'image', src: 'images/portfolio/img_0022.jpeg' },
   { type: 'video', youtubeId: 'xHGsFL_f2No' },
   { type: 'video', youtubeId: 'VRUrc2k2IMo' },
   { type: 'video', youtubeId: 'EDWb5IyBvHU' },
