@@ -1,4 +1,8 @@
-//array of media
+//Marvens Sainterlien
+//2/08/2026
+//portfolio javascript file
+
+
 const portfolioMedia = [
   { type: 'image', src: 'images/portfolio/img_0022.jpeg' },
   { type: 'video', youtubeId: 'xHGsFL_f2No' },

@@ -1,3 +1,9 @@
+//Marvens Sainterlien
+//2/21/2026
+//node.js server
+
+
+
 // Load the http module
 const http = require('http');
 
@@ -54,7 +60,7 @@ const server = http.createServer((req, res) => {
 
     // Map URL paths to files inside the public folder
     const urlMap = {
-        '/': 'public/index.html',
+        '/': 'public/home.html',
         '/services': 'public/services.html',
         '/appointments' : 'public/appointment.html',
         '/portfolio': 'public/portfolio.html',
