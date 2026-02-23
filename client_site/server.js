@@ -53,9 +53,11 @@ function serveStaticFile(res, filePath) {
 const server = http.createServer((req, res) => {
 
     // Normalize the URL: remove query strings, trailing slashes, convert to lowercase
-    let urlPath = req.url.split('?')[0].toLowerCase();
-    if (urlPath !== '/' && urlPath.endsWith('/')) {
-        urlPath = urlPath.slice(0, -1);
+    let urlPath = req.url.split('?')[0];
+    let urlPathLower = urlPath.toLowerCase();
+
+    if (urlPathLower !== '/' && urlPathLower.endsWith('/')) {
+        urlPathLower = urlPathLower.slice(0, -1);
     }
 
     // Map URL paths to files inside the public folder
@@ -67,7 +69,7 @@ const server = http.createServer((req, res) => {
     };
 
     // Determine the file path
-    let filePath = urlMap[urlPath];
+    let filePath = urlMap[urlPathLower];
 
     if (filePath) {
         // Serve the mapped HTML page
