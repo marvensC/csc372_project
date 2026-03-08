@@ -5,7 +5,7 @@ service.php page -->
 
 
 
-<?php require_once 'includes/HairService.php'; ?>
+<?php require_once 'includes/hairService.php'; ?>
 
 <!DOCTYPE html>
 <html>
