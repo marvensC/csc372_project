@@ -13,10 +13,17 @@
 <div class="content">
   <h1>Services</h1>
 
-  <div class="service-buttons">
-    {{#each serviceCategories}}
-      <button class="service-btn {{#if active}}active{{/if}}" data-search="{{search}}">{{label}}</button>
-    {{/each}}
+  <div class="service-cards">
+  {{#each serviceCategories}}
+    <div class="service-card {{#if active}}active{{/if}}"
+         data-search="{{search}}"
+         onclick="selectService(this)">
+      <h3>{{label}}</h3>
+      <div class="price">{{price}}</div>
+      <div class="duration">⏱ {{duration}}</div>
+      <div class="desc">{{description}}</div>
+    </div>
+  {{/each}}
   </div>
 
   <div class="gallery-frame">
@@ -39,3 +46,16 @@
 </footer>
 
 <script src='/js/api.js'></script>
+<script>
+  //click on cards
+  function selectService(card) {
+    document.querySelectorAll('.service-card').forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+    getImages(card.dataset.search);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const defaultCard = document.querySelector('.service-card.active');
+    if (defaultCard) getImages(defaultCard.dataset.search);
+  });
+</script>

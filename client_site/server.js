@@ -53,13 +53,12 @@ const portfolioMedia = [
 
 // Service categories data
 const serviceCategories = [
-  { label: 'Braids',       search: 'braids',            active: true },
-  { label: 'Cornrows',     search: 'cornrows',           active: false },
-  { label: 'Locs',         search: 'dreadlocks-black',   active: false },
-  { label: 'Twists',       search: 'twisted-braid-hair', active: false },
-  { label: 'Natural Hair', search: 'curly hair',         active: false },
+  { label: 'Braids',       search: 'braids',             price: 'Starting at $80.00',  duration: '3 hrs',        description: 'Classic and creative braiding styles tailored to your length and preference.',          active: true },
+  { label: 'Cornrows',     search: 'cornrows',            price: 'Starting at $60.00',  duration: '2 hrs',        description: 'Neat, sleek cornrow patterns customized for any occasion or everyday wear.',            active: false },
+  { label: 'Locs',         search: 'dreadlocks-black',    price: 'Starting at $100.00', duration: '4 hrs',        description: 'Starter locs, retwists, and maintenance to keep your locs healthy and defined.',        active: false },
+  { label: 'Twists',       search: 'twisted-braid-hair',  price: 'Starting at $75.00',  duration: '2 hrs 30 min', description: 'Two-strand and passion twists for a beautiful protective style with natural movement.', active: false },
+  { label: 'Natural Hair', search: 'curly hair',          price: 'Starting at $65.00',  duration: '1 hr 30 min',  description: 'Wash-and-go, twist-outs, and styling that celebrates your natural curl pattern.',        active: false },
 ];
-
 
 // Routes
 app.get('/', (req, res) => {
