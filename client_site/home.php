@@ -1,3 +1,10 @@
+<?php session_start(); 
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,11 +24,11 @@
     <img id = 'logo' src="images/logosvg.svg" alt=" logo">
     <!--nav-->
     <div class="nav">
-      <a href = "home.html"  class= "active" title="Home">Home</a>
+      <a href = "home.php"  class= "active" title="Home">Home</a>
       <a href = "services.php" title="services">Services</a>
       <a href = "appointment.html" title="Book Now">Book Now</a>
       <a href = "portfolio.html" title="portfolio">Portfolio</a>
-      <a href="#" id="review-nav" title="Leave a review">Leave a review</a>
+      <a href="review.php"  title="Leave a review">Leave a review</a>
       <a href="#" id="contact-nav" title="Contact">Contact us</a>
     </div>
 
@@ -36,7 +43,12 @@
 
   <h1> Welcome to Saintly Beauty</h1>
 
-  <h2> About</h2>
+  <?php if (isset($_SESSION['reviewed']) && $_SESSION['reviewed'] === true): ?>
+    
+    <h2> Welcome back, <?php echo htmlspecialchars($_SESSION['reviewer_name']); ?>! </h2>
+  <?php endif; ?>
+
+  <h3> About</h3>
   <p> Saintly Beauty is a home-based hair business dedicated to enhancing natural beauty with care, 
     creativity, and professionalism. I provide a warm, welcoming environment where clients receive personalized styling, 
     quality hair services with premium products designed to make them look and feel heavenly. 
@@ -52,6 +64,9 @@
 
     <div class="footer-top">
       <a  href="#" id="contact-link" title="Contact Us">Contact Us</a>
+      <?php if (isset($_SESSION['reviewed'])): ?>
+         <a href="clear-session.php" title="Clear preferences">Clear my preferences</a>
+      <?php endif; ?>
 
       <div class="socials-links">
         <span > Follow Us</span>
@@ -68,10 +83,9 @@
 		
 	</footer>
 		
-  <script src='js/reviewModal.js'></script>
   <script src='js/contactModal.js'></script>
   <script src='js/portfolio.js'></script>
-  <script src='js/page-manager.js'></script>
+  
 
 
   

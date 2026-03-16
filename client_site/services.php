@@ -22,11 +22,11 @@ service.php page -->
   <div class="header">
     <img id='logo' src="images/logosvg.svg" alt=" logo">
     <div class="nav">
-      <a href="home.html" title="Home">Home</a>
+      <a href="home.php" title="Home">Home</a>
       <a href="services.php" class="active" title="services">Services</a>
       <a href="appointment.html" title="Book Now">Book Now</a>
       <a href="portfolio.html" title="portfolio">Portfolio</a>
-      <a href="#" id="review-nav" title="Leave a review">Leave a review</a>
+      <a href="review.php"  title="Leave a review">Leave a review</a>
       <a href="#" id="contact-nav" title="Contact">Contact us</a>
     </div>
   </div>
@@ -66,10 +66,9 @@ service.php page -->
     <span>&copy; 2025 Saintly Beauty</span>
   </footer>
 
-  <script src='js/reviewModal.js'></script>
   <script src='js/contactModal.js'></script>
   <script src='js/api.js'></script>
-  <script src='js/page-manager.js'></script>
+  
   <script>
     function selectService(card) {
       document.querySelectorAll('.service-card').forEach(c => c.classList.remove('active'));

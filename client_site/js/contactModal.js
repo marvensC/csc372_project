@@ -74,3 +74,7 @@ function initContactModal() {
     contactModal.style.display = 'none';
   });
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  initContactModal();
+});

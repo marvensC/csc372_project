@@ -25,6 +25,11 @@ h2 {
   color: orange;
 }
 
+h3 {
+  text-align: center;
+  color: orange;
+}
+
 #logo {
   height: 150px;
 }
@@ -281,7 +286,7 @@ h2 {
   }
 }
 
-/* Modal styles */
+/* Modal styles, contact, review */
 .modal {
   display: none; 
   position: fixed;
@@ -306,7 +311,6 @@ h2 {
 }
 
 
-.close-review,
 .close-contact {
   color: #aaa;
   float: right;
@@ -317,8 +321,7 @@ h2 {
 }
 
 
-.close-review:hover,
-.close-review:focus,
+
 .close-contact:hover,
 .close-contact:focus {
   color: #000;
@@ -368,6 +371,37 @@ h2 {
 
 .modal-content button:hover {
   background-color: #45a049;
+}
+
+ /* Review page  */
+.review-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.review-page .modal-content {
+  display: block;
+  margin: 0;
+}
+
+.error {
+  color: #ff4444;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.form-message {
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #4CAF50;
+}
+
+.form-message.error {
+  color: #ff4444;
 }
 
 
@@ -446,3 +480,6 @@ h2 {
     .service-card .price { color: #fff; font-weight: bold; font-size: 15px; margin-bottom: 4px; }
     .service-card .duration { color: #aaa; font-size: 13px; margin-bottom: 10px; }
     .service-card .desc { color: #ccc; font-size: 13px; line-height: 1.5; }
+
+
+ 
