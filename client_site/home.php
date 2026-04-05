@@ -36,17 +36,19 @@
 
   <div class="content">
 
+  
+  <?php if (isset($_SESSION['reviewed']) && $_SESSION['reviewed'] === true): ?>
+    
+    <h2> Welcome back, <?php echo htmlspecialchars($_SESSION['reviewer_name']); ?>! </h2>
+  <?php endif; ?>
+
+    
   <div id="preview-portfolio-frame">  
    <div class="preview-portfolio"></div>
   </div>
 
 
   <h1> Welcome to Saintly Beauty</h1>
-
-  <?php if (isset($_SESSION['reviewed']) && $_SESSION['reviewed'] === true): ?>
-    
-    <h2> Welcome back, <?php echo htmlspecialchars($_SESSION['reviewer_name']); ?>! </h2>
-  <?php endif; ?>
 
   <h3> About</h3>
   <p> Saintly Beauty is a home-based hair business dedicated to enhancing natural beauty with care, 
