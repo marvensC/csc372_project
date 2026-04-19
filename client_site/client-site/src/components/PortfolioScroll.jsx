@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styles from './PortfolioScroll.module.css'
 
 const portfolioMedia = [
@@ -18,6 +19,45 @@ const portfolioMedia = [
   { type: 'video', youtubeId: 'FIb6duFXL4U' },
 ]
 
+function VideoItem({ youtubeId, preview }) {
+  const [playing, setPlaying] = useState(false)
+
+  // Preview (home page) — always autoplay
+  if (preview) {
+    return (
+      <iframe
+        src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&playlist=${youtubeId}&controls=0&modestbranding=1&rel=0&playsinline=1`}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="Portfolio video"
+      />
+    )
+  }
+
+  // Full portfolio page — thumbnail until clicked
+  if (!playing) {
+    return (
+      <div className={styles.thumbWrapper} onClick={() => setPlaying(true)}>
+        <img
+          src={`https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`}
+          alt="Video thumbnail"
+          className={styles.thumb}
+        />
+        <div className={styles.playBtn}>▶</div>
+      </div>
+    )
+  }
+
+  return (
+    <iframe
+      src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1&mute=1&loop=1&playlist=${youtubeId}&controls=0&modestbranding=1&rel=0&playsinline=1`}
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+      title="Portfolio video"
+    />
+  )
+}
+
 export default function PortfolioScroll({ preview = false }) {
   const media = preview ? portfolioMedia.slice(0, 6) : portfolioMedia
 
@@ -27,12 +67,7 @@ export default function PortfolioScroll({ preview = false }) {
         {media.map((item, i) => (
           <div key={i} className={styles.item}>
             {item.type === 'video' ? (
-              <iframe
-                src={`https://www.youtube.com/embed/${item.youtubeId}?autoplay=1&mute=1&loop=1&playlist=${item.youtubeId}&controls=0&modestbranding=1&rel=0`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title={`Portfolio video ${i + 1}`}
-              />
+              <VideoItem youtubeId={item.youtubeId} preview={preview} />
             ) : (
               <img src={item.src} alt={`Portfolio item ${i + 1}`} />
             )}
