@@ -1,0 +1,40 @@
+.frame {
+  background-color: var(--surface);
+  border-radius: 12px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+}
+
+.full {
+  flex-wrap: wrap;
+  justify-content: center;
+  overflow-x: unset;
+}
+
+.item {
+  width: 200px;
+  aspect-ratio: 9 / 16;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--black);
+  position: relative;
+}
+
+.item iframe,
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  border: none;
+}

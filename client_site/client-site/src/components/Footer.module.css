@@ -1,0 +1,70 @@
+.footer {
+  background-color: var(--black);
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 30px 20px 20px;
+  margin-top: 60px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contactLink {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.contactLink:hover {
+  background: var(--text);
+  color: var(--black);
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.followText {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.icons {
+  display: flex;
+  gap: 16px;
+  font-size: 20px;
+}
+
+.icons a {
+  transition: transform 0.2s;
+  display: block;
+}
+
+.icons a:hover {
+  transform: translateY(-2px) scale(1.2);
+}
+
+.copy {
+  font-size: 12px;
+  color: var(--text-dim);
+  letter-spacing: 0.05em;
+}

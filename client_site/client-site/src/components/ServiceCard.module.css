@@ -1,0 +1,47 @@
+.card {
+  background-color: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 24px;
+  width: 200px;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+  outline: none;
+}
+
+.card:hover,
+.card:focus,
+.active {
+  border-color: var(--orange);
+  transform: translateY(-3px);
+}
+
+.active {
+  background-color: var(--orange-dim);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.price {
+  color: var(--text);
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.duration {
+  color: var(--text-muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  color: #ccc;
+  font-size: 13px;
+  line-height: 1.5;
+}

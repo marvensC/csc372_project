@@ -1,0 +1,21 @@
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.calendlyWrapper {
+  background-color: var(--surface-3);
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .calendlyWrapper :global(.calendly-inline-widget) {
+    height: 900px !important;
+  }
+}
