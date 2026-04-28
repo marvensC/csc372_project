@@ -309,8 +309,12 @@ h3 {
   position: relative;
   color:white;
 }
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
-
+/* contact */
 .close-contact {
   color: #aaa;
   float: right;
@@ -325,12 +329,6 @@ h3 {
 .close-contact:hover,
 .close-contact:focus {
   color: #000;
-}
-
-
-.modal-content h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
 }
 
 .contact-details {
@@ -362,6 +360,8 @@ h3 {
 .contact-detail a:hover {
   color: orange;
 }
+
+
 
  /* Review page  */
 .review-page {
@@ -395,6 +395,51 @@ h3 {
 .form-message.error {
   color: #ff4444;
 }
+
+/* review page form box */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.modal-content label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+
+.modal-content input,
+.modal-content textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+
+.modal-content button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.modal-content button:hover {
+  background-color: #45a049;
+}
+
+
+
+
 
 
 /* Calendly Styling */
