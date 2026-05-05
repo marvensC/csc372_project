@@ -65,4 +65,6 @@ serviceBtns.forEach(btn => {
 });
 
 //default
-getImages('braids');
+if (document.getElementById('gallery')) {
+  getImages('braids');
+}

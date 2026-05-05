@@ -20,14 +20,18 @@
 <body>
 
   <div class="header">
+
     <!--logo-->
-    <img id = 'logo' src="images/logosvg.svg" alt=" logo">
+    <a href="home.php" title="Home">
+        <img id='logo' src="images/logosvg.svg" alt="Saintly Beauty logo">
+    </a>
+    
     <!--nav-->
     <div class="nav">
       <a href = "home.php"  class= "active" title="Home">Home</a>
       <a href = "services.php" title="services">Services</a>
-      <a href = "appointment.html" title="Book Now">Book Now</a>
-      <a href = "portfolio.html" title="portfolio">Portfolio</a>
+      <a href = "appointment.php" title="Book Now">Book Now</a>
+      <a href = "portfolio.php" title="portfolio">Portfolio</a>
       <a href="review.php"  title="Leave a review">Leave a review</a>
       <a href="#" id="contact-nav" title="Contact">Contact us</a>
     </div>

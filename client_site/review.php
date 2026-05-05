@@ -152,12 +152,16 @@ $allReviews = $reviewsStmt->fetchAll();
 <body>
  
   <div class="header">
-    <img id='logo' src="images/logosvg.svg" alt=" logo">
+
+    <a href="home.php" title="Home">
+        <img id='logo' src="images/logosvg.svg" alt="Saintly Beauty logo">
+    </a>
+    
     <div class="nav">
       <a href="home.php" title="Home">Home</a>
       <a href="services.php" title="services">Services</a>
-      <a href="appointment.html" title="Book Now">Book Now</a>
-      <a href="portfolio.html" title="portfolio">Portfolio</a>
+      <a href="appointment.php" title="Book Now">Book Now</a>
+      <a href="portfolio.php" title="portfolio">Portfolio</a>
       <a href="review.php" class="active" title="Leave a review">Leave a review</a>
       <a href="#" id="contact-nav" title="Contact">Contact us</a>
     </div>
@@ -231,7 +235,7 @@ $allReviews = $reviewsStmt->fetchAll();
         </form>
       </div>
  
-      // options
+      <!-- options -->
       <?php if (!empty($allReviews)): ?>
         <div class="reviews-list">
           <h2>Reviews</h2>

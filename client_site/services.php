@@ -44,12 +44,16 @@ $services  = $statement->fetchAll();
 <body>
  
   <div class="header">
-    <img id='logo' src="images/logosvg.svg" alt=" logo">
+
+    <a href="home.php" title="Home">
+        <img id='logo' src="images/logosvg.svg" alt="Saintly Beauty logo">
+    </a>
+    
     <div class="nav">
       <a href="home.php" title="Home">Home</a>
       <a href="services.php" class="active" title="services">Services</a>
-      <a href="appointment.html" title="Book Now">Book Now</a>
-      <a href="portfolio.html" title="portfolio">Portfolio</a>
+      <a href="appointment.php" title="Book Now">Book Now</a>
+      <a href="portfolio.php" title="portfolio">Portfolio</a>
       <a href="review.php" title="Leave a review">Leave a review</a>
       <a href="#" id="contact-nav" title="Contact">Contact us</a>
     </div>
@@ -76,7 +80,7 @@ $services  = $statement->fetchAll();
           elseif ($h > 0)            echo $h . ' hr' . ($h > 1 ? 's' : '');
           else                       echo $m . ' min';
         ?></p>
-        <a href="appointment.html" title="Book Now">Book This Service</a>
+        <a href="appointment.php" title="Book Now">Book This Service</a>
       </div>
  
     <?php else: ?>

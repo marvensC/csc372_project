@@ -13,14 +13,18 @@
 <body>
 
   <div class="header">
+
     <!--logo-->
-    <img id = 'logo' src="images/logosvg.svg" alt=" logo">
+    <a href="home.php" title="Home">
+        <img id='logo' src="images/logosvg.svg" alt="Saintly Beauty logo">
+    </a>
+    
     <!--nav-->
     <div class="nav">
-      <a href = "home.php"   title="Home">Home</a>
+      <a href = "home.php"  title="Home">Home</a>
       <a href = "services.php" title="services">Services</a>
-      <a href = "appointment.html" class= "active"  title="Book Now">Book Now</a>
-      <a href = "portfolio.html" title="portfolio">Portfolio</a>
+      <a href = "appointment.php" title="Book Now">Book Now</a>
+      <a href = "portfolio.php" class= "active"  title="portfolio">Portfolio</a>
       <a href="review.php"  title="Leave a review">Leave a review</a>
       <a href="#" id="contact-nav" title="Contact">Contact us</a>
     </div>
@@ -28,18 +32,11 @@
   </div>
 
   <div class="content">
-    <h1>Book Your Appointment</h1>
 
-    
-    <!-- Calendly inline widget -->
-     <div class="calendly-inline-widget" 
-         data-url="https://calendly.com/sainterlienchristie1907/hair-appointment?hide_gdpr_banner=1&primary_color=ff8c00" 
-         style="min-width:320px;height:700px;">
-    </div>
+  <h1>Porfolio</h1>
+   <div id="full-portfolio-frame">  
+   <div class="full-portfolio"></div>
 
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-    <!-- Calendly inline widget -->
   </div>
 
 
@@ -65,9 +62,11 @@
 		
 	</footer>
 		
-  
   <script src='js/contactModal.js'></script>
+  <script src='js/portfolio.js'></script>
   
+
+
   
 </body>
 </html>
